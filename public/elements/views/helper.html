@@ -1,0 +1,37 @@
+<script>
+function random(min, max) {
+
+  return Math.random() * (max - min) + min;
+
+}
+
+function clamp(value, min, max) {
+
+  return Math.max(Math.min(value, max), min);
+
+}
+
+function timer(start) {
+
+  return function() {
+
+    var time = Date.now();
+    var diff = start ? time - start : 0;
+    start = time;
+    return diff;
+
+  };
+
+}
+
+function counter(start) {
+
+  return function() {
+
+    start = start || 0;
+    return ++start;
+
+  };
+
+}
+</script>

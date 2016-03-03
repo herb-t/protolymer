@@ -1,0 +1,45 @@
+<link rel="import" href="helper.html">
+
+<dom-module id="desktop-view">
+
+  <template>
+
+    <style>
+
+      :host {
+        display: block;
+      }
+
+    </style>
+
+    <h1>protolymer</h1>
+    <p>A simple scaffold for quick protoypes</p>
+    <ul>
+      <li>Polymer 1.0</li>
+      <li>Gulp (server and live reload)</li>
+      <li>GSAP</li>
+    </ul>
+
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'desktop-view',
+
+        /**
+         * Logging
+         */
+        created: function() {
+
+          console.info('created <desktop-view/>');
+        }
+
+      });
+
+    })();
+  </script>
+
+</dom-module>

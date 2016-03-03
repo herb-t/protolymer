@@ -1,0 +1,63 @@
+<link rel="import" href="views/desktop-view.html">
+
+<dom-module id="custom-element">
+
+  <template>
+
+    <style>
+
+      :host {
+        display: block;
+      }
+
+    </style>
+
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /**
+       * This element is the wrapper for all functionality. Instantiates a
+       * child view based on mobile/desktop platform
+       */
+      Polymer({
+        is: 'custom-element',
+
+        /**
+         * Logging
+         */
+        created: function() {
+
+          console.info('created <custom-element/>');
+
+        },
+
+        /**
+         * Create the appropriate view for the platform and append to this
+         * element
+         */
+        attached: function() {
+
+          var name =  this.isMobile() ? 'mobile-view' : 'desktop-view';
+          var view = document.createElement(name);
+          this.appendChild(view)
+
+        },
+
+        /**
+         * Return true if url starts with /mobile
+         * @return {boolean}
+         */
+        isMobile: function() {
+
+          return !!location.pathname.match(/^\/mobile/);
+
+        }
+      });
+
+    })();
+  </script>
+
+</dom-module>

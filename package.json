@@ -1,0 +1,21 @@
+{
+  "name": "protolymer",
+  "description": "A project seed for quick protoypes with Polymer and gulp",
+  "version": "0.0.1",
+  "main": "app.js",
+  "authors": [
+    "herb <herb.torres@byhook.com>"
+  ],
+  "private": true,
+
+  "dependencies": {
+    "express": "3.4.8"
+    },
+
+  "devDependencies": {
+    "connect-livereload": "^0.5.4",
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "open": "0.0.5"
+  }
+}
